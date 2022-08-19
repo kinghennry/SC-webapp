@@ -1,6 +1,8 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 function Code() {
+  const history = useHistory();
   return (
     <div className="code">
       <h1>Enter Code</h1>
@@ -24,7 +26,7 @@ function Code() {
       <br />
       <p className="blue">More Information</p>
       <div className="code_btn">
-        <button>Verify</button>
+        <button onClick={() => history.push("/success")}>Verify</button>
       </div>
     </div>
   );

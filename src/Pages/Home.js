@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { useHistory } from "react-router-dom";
 
 function Home() {
+  const history = useHistory();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowPassword = () => setShowPassword(!showPassword);
@@ -39,7 +41,7 @@ function Home() {
               )}
             </div>
           </div>
-          <button>Sign in</button>
+          <button onClick={() => history.push("/signup")}>Sign in</button>
         </form>
         <p className="text-ct m-19">&#169;2020</p>
       </div>
